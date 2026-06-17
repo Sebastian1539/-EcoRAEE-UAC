@@ -1,0 +1,38 @@
+@model EcoRAEE_UAC.Models.Campaña
+@{
+    ViewData["Title"] = "Eliminar Campaña";
+}
+
+<div class="alert alert-danger">
+    <h2><i class="bi bi-trash"></i> ¿Eliminar esta campaña?</h2>
+    <p>Esta acción no se puede deshacer.</p>
+</div>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.Nombre)</dd>
+
+        <dt class="col-sm-2">Fecha</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.Fecha)</dd>
+
+        <dt class="col-sm-2">Lugar</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.Lugar)</dd>
+
+        <dt class="col-sm-2">Responsable</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.Responsable)</dd>
+
+        <dt class="col-sm-2">Estado</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.Estado)</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">
+            <i class="bi bi-trash"></i> Eliminar
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Volver
+        </a>
+    </form>
+</div>

@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center">
+    <div class="display-1 text-success mb-3">
+        <i class="bi bi-recycle"></i>
+    </div>
+    <h1 class="display-4">EcoRAEE UAC</h1>
+    <p class="lead">Plataforma de Gestión de Campañas Ambientales - RAEE</p>
+    <p class="text-muted">Universidad Andina del Cusco | Responsabilidad Social Universitaria</p>
+    <hr />
+    <div class="row mt-5">
+        <div class="col-md-4 mb-3">
+            <a asp-controller="Campañas" asp-action="Index" class="text-decoration-none">
+                <div class="card border-success shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-calendar-event display-6 text-success"></i>
+                        <h5 class="mt-2">Campañas</h5>
+                        <p class="text-muted">Gestionar campañas ambientales</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a asp-controller="Participantes" asp-action="Index" class="text-decoration-none">
+                <div class="card border-success shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-people display-6 text-success"></i>
+                        <h5 class="mt-2">Participantes</h5>
+                        <p class="text-muted">Registrar participantes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a asp-controller="Reportes" asp-action="Index" class="text-decoration-none">
+                <div class="card border-success shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-bar-chart display-6 text-success"></i>
+                        <h5 class="mt-2">Reportes</h5>
+                        <p class="text-muted">Indicadores de impacto RSU</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

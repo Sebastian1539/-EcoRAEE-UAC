@@ -1,0 +1,29 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.sln.docstates
+*.userprefs
+
+# Visual Studio
+.vs/
+*.sln.ide/
+
+# IDE
+.idea/
+*.swp
+*~
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Docker
+docker-compose.override.yml
+
+# wwwroot/lib (bundled by libman)
+wwwroot/lib/
+
+# uploads (user content)
+wwwroot/uploads/*

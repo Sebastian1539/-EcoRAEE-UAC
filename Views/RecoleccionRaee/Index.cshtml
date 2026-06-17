@@ -1,0 +1,44 @@
+@model IEnumerable<EcoRAEE_UAC.Models.RecoleccionRaee>
+@{
+    ViewData["Title"] = "Recolección RAEE";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="bi bi-trash2 text-success"></i> Recolección RAEE</h2>
+    <a asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Nueva Recolección
+    </a>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead class="table-success">
+        <tr>
+            <th>Tipo Residuo</th>
+            <th>Cantidad (Kg)</th>
+            <th>Lugar</th>
+            <th>Fecha</th>
+            <th>Campaña</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => item.TipoResiduo)</td>
+                <td>@item.CantidadKg.ToString("F2")</td>
+                <td>@Html.DisplayFor(m => item.LugarRecoleccion)</td>
+                <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
+                <td>@item.Campaña?.Nombre</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning">
+                        <i class="bi bi-pencil"></i>
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">
+                        <i class="bi bi-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

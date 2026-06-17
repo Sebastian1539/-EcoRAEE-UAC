@@ -1,0 +1,55 @@
+:root {
+    --primary-green: #1B5E20;
+    --secondary-green: #2E7D32;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.card {
+    transition: transform 0.2s ease;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    border-radius: 8px 8px 0 0 !important;
+}
+
+.btn {
+    border-radius: 6px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+main.container {
+    padding-bottom: 80px;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+.badge {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+}
+
+.display-1 {
+    font-size: 5rem;
+}

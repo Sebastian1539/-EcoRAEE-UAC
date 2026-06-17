@@ -1,0 +1,30 @@
+@model EcoRAEE_UAC.Models.RecoleccionRaee
+@{
+    ViewData["Title"] = "Eliminar Recolección RAEE";
+}
+
+<div class="alert alert-danger">
+    <h2><i class="bi bi-trash"></i> ¿Eliminar esta recolección?</h2>
+</div>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">Tipo Residuo</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.TipoResiduo)</dd>
+
+        <dt class="col-sm-2">Cantidad</dt>
+        <dd class="col-sm-10">@Model.CantidadKg.ToString("F2") Kg</dd>
+
+        <dt class="col-sm-2">Lugar</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.LugarRecoleccion)</dd>
+
+        <dt class="col-sm-2">Campaña</dt>
+        <dd class="col-sm-10">@Model.Campaña?.Nombre</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Volver</a>
+    </form>
+</div>
